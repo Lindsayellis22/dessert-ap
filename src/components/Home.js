@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import CusineResults from './CusineResults';
+import RecipeResults from './RecipeResults';
+import { Route, Routes, Link } from 'react-router-dom';
 
 function Home(props) {
     const [desserts, setDesserts] = useState([]);
@@ -19,9 +21,11 @@ function Home(props) {
   }
     return (
         <div>
+            <button onClick={getDessertCuisine}>Muffin</button>
             <h1>The Cultured Confectioner</h1>
             <h2>Discover delicious desserts from around the globe and get your...just desserts.</h2>
             <CusineResults loading={loading} desserts={desserts} />
+            <RecipeResults loading={loading} desserts={desserts} />
         </div>
     );
 }
