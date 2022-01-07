@@ -7,6 +7,7 @@ function RecipePage(props) {
     const [dessert, setDessert] = useState({});
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
+    const { extendedIngredients = [] } =  dessert;
 
     useEffect(() => { 
       const url = `https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.REACT_APP_DESSERT_API_KEY}`;
@@ -24,7 +25,14 @@ function RecipePage(props) {
     return (
         <div>
           <h1>{dessert.title}</h1>
-          {/* map over array and get original string, and ul and each one is li */}
+          <img src={dessert.image} alt={dessert.title} />
+          <p>{dessert.instructions}</p>
+          {/* <p>{dessert.extendedIngredients.original}</p> */}
+          <ul>
+    {extendedIngredients.map((ingredient) => {
+      return <li key={ingredient.original}>{ingredient.original}</li>;
+    })}
+  </ul>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const CUISINE_ARRAY = ['African', 'American', 'British'];
+const CUISINE_ARRAY = ['African', 'American', 'British', 'Cajun', 'Caribbean', 'Chinese', 'EasternEuropean', 'European', 'French', 'German', 'Greek', 'Indian', 'Irish'];
+
 
 function CuisineForm(props) {   
     return (
