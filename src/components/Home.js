@@ -4,7 +4,7 @@ import CuisineForm from './CuisineForm';
 
 function Home(props) {
     const [desserts, setDesserts] = useState([]);
-    const [cuisine, setCuisine] = useState('italian');
+    const [cuisine, setCuisine] = useState('');
     const [loading, setLoading] = useState(false);
   
   function getDessertCuisine() {
@@ -25,7 +25,7 @@ function Home(props) {
     }
 
     function handleChange(event) {
-        debugger;
+        setCuisine(event.target.value);
     }
 
     return (
@@ -35,7 +35,8 @@ function Home(props) {
             <CuisineForm
                 handleChange={handleChange}
                 handleSubmit={handleSubmit}
-                />
+                cuisine={cuisine}
+            />
             <CuisineResults loading={loading} desserts={desserts} />
         </div>
     );

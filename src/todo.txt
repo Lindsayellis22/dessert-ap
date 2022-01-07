@@ -1,0 +1,13 @@
+error handling in both the api calls
+map over ingredients and pull out original
+also want to print instructions
+and the image
+and map cuisine on recipe page
+styling
+-recipepage
+-home
+-cupcake logo
+
+stretch goals
+loading component
+error message component

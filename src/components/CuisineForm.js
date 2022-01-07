@@ -1,23 +1,22 @@
 import React from 'react';
 
-function CuisineForm(props) {
-    const { handleSubmit, handleChange, searchString } = props;
-        
-        return (
-            <form onSubmit={handleSubmit} className="form-horizontal">
-            <input
-              placeholder="Search"
-              type="text"
-              name="searchString"
-              required
-              onChange={handleChange}
-              value={searchString}
-            />
-            <button type="submit">Search</button>
-          </form>
-        );
-      }
+const CUISINE_ARRAY = ['African', 'American', 'British'];
+
+function CuisineForm(props) {   
+    return (
+      <form onSubmit={props.handleSubmit} className="form-horizontal">
+        <label>Choose a Cuisine:
+          <select value={props.cuisine} onChange={props.handleChange}>
+            {CUISINE_ARRAY.map((cuisine) => {
+              return (
+                <option value={cuisine} key={cuisine}>{cuisine}</option> 
+              )
+            })}
+          </select>
+        </label> 
+        <button type="submit">Select</button>
+      </form>
+    );
+}
     
-
-
 export default CuisineForm;

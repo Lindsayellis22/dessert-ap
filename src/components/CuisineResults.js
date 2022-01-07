@@ -8,11 +8,11 @@ function CuisineResults(props) {
   return (
     <section className="container">
       {props.desserts.map((dessert) => (
-        <Link to={`results/${dessert.id}`} key={dessert.id}>
-        <div className="card-image">
-          <img src={dessert.image} alt={dessert.title} />
-        </div>
-      </Link>
+        <Link to={`recipes/${dessert.id}`} key={dessert.id}>
+          <div className="card-image">
+            <img src={dessert.image} alt={dessert.title} />
+          </div>
+        </Link>
       ))}
     </section>
   );
