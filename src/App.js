@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
 import Home from './components/Home';
-import RecipeResults from './components/RecipeResults';
+import RecipePage from './components/RecipePage';
 
 function App() {
   return (
     <div className="App">
-      <header>Just Desserts</header>
+      <header>The Cultred Confectioner</header>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='results/:id' element={<RecipeResults />} />
+          <Route path='recipes/:id' element={<RecipePage />} />
         </Routes>
     </div>
   );

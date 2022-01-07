@@ -3,16 +3,16 @@ import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-function RecipeResults(props) {
-    const [recipes, setRecipes] = useState(null);
+function RecipePage(props) {
+    const [recipe, setRecipe] = useState(null);
     const { id } = useParams();
 
     useEffect(() => { 
-        const url = `https://api.spoonacular.com/recipes/324694/analyzedInstructions?apiKey=${process.env.REACT_APP_DESSERT_API_KEY}&type=dessert&cuisine=italian`;
-        fetch(url)
-        .then((res) => res.json())
+      const url = `https://api.spoonacular.com/recipes/324694/analyzedInstructions?apiKey=${process.env.REACT_APP_DESSERT_API_KEY}&type=dessert&cuisine=italian`;
+      fetch(url)
+      .then((res) => res.json())
       .then((res) => {
-        setRecipes(res.steps);
+        setRecipe(res.steps);
         console.log(res);
       }).catch((err) => console.error(`Oops, something went wrong: ${err}`));
       }, []);
@@ -23,4 +23,4 @@ function RecipeResults(props) {
     );
 }
 
-export default RecipeResults;
+export default RecipePage;

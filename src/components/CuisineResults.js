@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 
-function CusineResults(props) {
+function CuisineResults(props) {
   if (props.loading) {return <h1>Loading...</h1>};
  
   return (
@@ -18,4 +18,4 @@ function CusineResults(props) {
   );
 }         
 
-export default CusineResults;
+export default CuisineResults;
