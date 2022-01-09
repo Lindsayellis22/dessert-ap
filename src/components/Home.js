@@ -31,7 +31,6 @@ function Home(props) {
 
     return (
         <div>
-            <h1>The Cultured Confectioner</h1>
             <h2>Discover delicious desserts from around the globe and get your...just desserts.</h2>
             <CuisineForm
                 handleChange={handleChange}

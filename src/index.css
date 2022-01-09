@@ -20,6 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
+  background-color: #fec1c1;
 }
 
 h1 {
@@ -30,15 +31,18 @@ h1 {
 }
 
 header {
-  background-color: hotpink;
+  background-color: #fec1c1;
   color: white;
   padding: 1rem;
   text-decoration: none;
+  display: flex;
+  gap: 20px;
 }
 
 header a {
-  color: white;
+  color: #00A79D;
   text-decoration: none;
+  display: flex;
 }
 
 .container {
@@ -49,19 +53,21 @@ header a {
   margin: 0 auto;
   max-width: 1200px;
   padding: 1rem;
+  align-content: space-around;
 }
 
 .card {
-  border: 1px solid lightgray;
   border-radius: 1rem;
   display: grid;
   grid-template-rows: 2fr 1fr;
+  border-radius: 50%;
 }
 
 .card-image {
   align-items: center;
-  display: flex;
+  display: grid;
   justify-content: center;
+  border: 2px solid white;
 }
 
 .card-title {
@@ -82,11 +88,13 @@ header a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border: 2px solid salmon;
 }
 
 .details-image {
   padding: 1rem;
   width: 200px;
+  border: 2px solid salmon;
 }
 
 .details {
@@ -121,6 +129,16 @@ header a {
   display: inline-block;
   margin: 1rem 0;
   padding: 1rem;
+}
+
+.form-horizontal {
+  color: hotpink;
+}
+
+.cupCake {
+  width : 50px;
+  height: 50px;
+  display: flex;
 }
 
 

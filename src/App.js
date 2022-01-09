@@ -3,10 +3,13 @@ import './App.css';
 import Home from './components/Home';
 import RecipePage from './components/RecipePage';
 
+
+
 function App() {
   return (
     <div className="App">
-      <header> 
+      <header>
+      <img src='cupcake/logo.png' className='cupCake' alt="Logo" /> 
         <h1>
           <Link to='/'>The Cultred Confectioner</Link>
         </h1>

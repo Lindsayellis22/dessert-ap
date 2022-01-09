@@ -1,5 +1,4 @@
 import React from 'react';
-import './cuisineform.css';
 
 const CUISINE_ARRAY = ['African', 'American', 'British', 'Cajun', 'Eastern European', 'European', 'French', 'German', 'Indian', 'Irish', 'Italian', 'Mediterranean', 'Mexican', 'Southern', 'Spanish'];
 
