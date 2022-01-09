@@ -4,8 +4,9 @@ import CuisineForm from './CuisineForm';
 
 function Home(props) {
     const [desserts, setDesserts] = useState([]);
-    const [cuisine, setCuisine] = useState('');
+    const [cuisine, setCuisine] = useState('default');
     const [loading, setLoading] = useState(false);
+    const [searched, setSearched] = useState(false);
   
   function getDessertCuisine() {
     const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_DESSERT_API_KEY}&type=dessert&cuisine=${cuisine}`;
@@ -13,9 +14,9 @@ function Home(props) {
     fetch(url)
         .then((res) => res.json())
         .then((res) => {
-        setDesserts(res.results);
-        setLoading(false);
-        console.log(res);
+            setDesserts(res.results);
+            setLoading(false);
+            setSearched(true);
       }).catch((err) => console.error(`Oops, something went wrong: ${err}`));
   }
   
@@ -37,7 +38,7 @@ function Home(props) {
                 handleSubmit={handleSubmit}
                 cuisine={cuisine}
             />
-            <CuisineResults loading={loading} desserts={desserts} />
+            {searched ? <CuisineResults loading={loading} desserts={desserts} /> : null}
         </div>
     );
 }

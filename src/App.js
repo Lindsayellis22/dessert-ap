@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router';
+import { Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import RecipePage from './components/RecipePage';
@@ -6,7 +6,11 @@ import RecipePage from './components/RecipePage';
 function App() {
   return (
     <div className="App">
-      <header>The Cultred Confectioner</header>
+      <header> 
+        <h1>
+          <Link to='/'>The Cultred Confectioner</Link>
+        </h1>
+      </header>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='recipes/:id' element={<RecipePage />} />
