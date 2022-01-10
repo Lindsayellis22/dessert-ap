@@ -4,21 +4,21 @@ import Home from './components/Home';
 import RecipePage from './components/RecipePage';
 import './index.css';
 
-
-
 function App() {
   return (
     <div className="App">
       <header>
-      <img src='cupcake/logo.png' className='cupCake' alt="Logo" /> 
-        <h1>
-          <Link to='/'>The Cultured Confectioner</Link>
-        </h1>
+        <Link to='/'>
+          <img src='cupcake/logo.png' className='cupcake' alt="Logo" /> 
+          <h1>
+            The Cultured Confectioner
+          </h1>
+        </Link>
       </header>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='recipes/:id' element={<RecipePage />} />
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='recipes/:id' element={<RecipePage />} />
+      </Routes>
     </div>
   );
 }

@@ -5,7 +5,7 @@ const CUISINE_ARRAY = ['African', 'American', 'British', 'Cajun', 'Eastern Europ
 
 function CuisineForm(props) { 
     return (  
-      <form onSubmit={props.handleSubmit} className="form-horizontal">
+      <form onSubmit={props.handleSubmit}>
         <label>Choose a Cuisine:
           <select value={props.cuisine} onChange={props.handleChange}>
             <option value='default' disabled hidden>
