@@ -12,7 +12,7 @@ function App() {
       <header>
       <img src='cupcake/logo.png' className='cupCake' alt="Logo" /> 
         <h1>
-          <Link to='/'>The Cultred Confectioner</Link>
+          <Link to='/'>The Cultured Confectioner</Link>
         </h1>
       </header>
         <Routes>
