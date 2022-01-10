@@ -17,7 +17,7 @@ function Home(props) {
             setDesserts(res.results);
             setLoading(false);
             setSearched(true);
-      }).catch((err) => console.error(`Oops, something went wrong: ${err}`));
+      }).catch((err) => {setLoading(false); setSearched(true);});
   }
   
     function handleSubmit(event) {
@@ -31,7 +31,7 @@ function Home(props) {
 
     return (
         <div>
-            <h2>Discover delicious desserts from around the globe and get your...just desserts.</h2>
+            <h2>Discover delicious desserts from around the globe!</h2>
             <CuisineForm
                 handleChange={handleChange}
                 handleSubmit={handleSubmit}

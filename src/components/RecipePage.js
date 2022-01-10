@@ -16,24 +16,22 @@ function RecipePage(props) {
       .then((res) => {
         setDessert(res);
         setLoading(false);
-        console.log(res);
       }).catch((err) => console.error(`Oops, something went wrong: ${err}`));
       }, []);
 
       if (loading) {return <h1>Loading...</h1>};
 
     return (
-        <div>
-          <h1>{dessert.title}</h1>
-          <img src={dessert.image} alt={dessert.title} />
+    <div>
+      <h1 className="dessert-title">{dessert.title}</h1>
+      <img className='image' src={dessert.image} alt={dessert.title} />
+        <ul>
+          {extendedIngredients.map((ingredient) => {
+            return <li className='ingredients' key={ingredient.original}>{ingredient.original}</li>;
+            })}
           <p>{dessert.instructions}</p>
-          {/* <p>{dessert.extendedIngredients.original}</p> */}
-          <ul>
-    {extendedIngredients.map((ingredient) => {
-      return <li key={ingredient.original}>{ingredient.original}</li>;
-    })}
-  </ul>
-        </div>
+        </ul>
+    </div>
     );
 }
 
