@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  font-family: 'Noto Serif', Georgia, serif;
+  font-family: "Noto Serif", Georgia, serif;
   font-weight: 300;
 }
 
@@ -38,13 +38,13 @@ header a img {
 
 label {
   color: #ff6556;
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   font-weight: bold;
   font-size: 20px;
 }
 
 .cupcake {
-  width : 50px;
+  width: 50px;
   height: 50px;
 }
 
@@ -56,7 +56,7 @@ label {
 }
 
 .image {
-  padding-top: 30px ;
+  padding-top: 30px;
 }
 
 p {
@@ -66,12 +66,12 @@ p {
 }
 
 .dessert-title {
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   color: #ff6566;
 }
 
 button {
-  background-color: #00A79D;
+  background-color: #00a79d;
   color: white;
   padding: 5px 10px;
   border-radius: 4px;
@@ -86,7 +86,7 @@ button:hover {
 h2 {
   padding-bottom: 30px;
   color: #ff6566;
-  font-family: 'Fredoka One', cursive;
+  font-family: "Fredoka One", cursive;
 }
 
 select {
